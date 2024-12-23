@@ -1,4 +1,6 @@
-﻿namespace session5
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace session5
 {
     internal class Program
     {
@@ -61,6 +63,24 @@
         }
 
 
+
+
+        public static void SumAndSubt(int x, int y, int c, int z, out int sum, out int subtracting)
+        {
+
+
+            sum = x + y;
+            subtracting = c - z;
+
+
+
+
+        }
+
+  
+
+
+
         static void Main(string[] args)
         {
             #region Q01
@@ -106,7 +126,7 @@
             #region Q02
             //2-	Explain the difference between passing (Reference type parameters) by value and by reference then write a suitable c# example
 
-            
+
             #region by value
             //int[] numbers = { 2, 3 };
             //Console.WriteLine(multiplication(numbers));
@@ -120,9 +140,9 @@
 
 
 
-            int[] numbers = { 2, 3 };
-            Console.WriteLine(multiplication(numbers));
-            Console.WriteLine(numbers[0]);
+            //int[] numbers = { 2, 3 };
+            //Console.WriteLine(multiplication(numbers));
+            //Console.WriteLine(numbers[0]);
 
 
             // i send numbers with obj and change the name to table and get the same answer 
@@ -133,6 +153,22 @@
 
 
 
+            #endregion
+
+            #region Q03
+            //3-	Write a c# Function that accept 4 parameters from user and return result of summation and subtracting of two numbers
+
+
+
+            //int a = 5;
+            //int b = 10;
+            //int c = 50;
+            //int d = 20;
+            //int sum,subtracting;
+
+            //SumAndSubt(a, b, c, d, out sum, out subtracting);
+            //Console.WriteLine(sum);
+            //Console.WriteLine(subtracting);
             #endregion
         }
     }
