@@ -40,7 +40,7 @@ namespace session5
             table[0] = 100;
             for (int i = 0; i < table.Length; i++)
             {
-                multiply *= table[i]; 
+                multiply *= table[i];
             }
 
             return multiply;
@@ -112,22 +112,22 @@ namespace session5
 
 
         public static bool prime(int Number)
-       
+
         //Q05
         {
-            if (Number ==1)
+            if (Number == 1)
             {
                 return false;
             }
 
-                for (int i = 2; i < Number; i++)
-                {
-                    if(Number % i == 0)
-                        return false;
-                    
+            for (int i = 2; i < Number; i++)
+            {
+                if (Number % i == 0)
+                    return false;
 
 
-                }
+
+            }
 
 
 
@@ -157,6 +157,22 @@ namespace session5
 
 
             }
+        }
+
+
+
+        public static int factorial(int input)
+        {
+            //Q07
+            int Num = 1;
+
+            for (int i = 1;i<= input;i++)
+
+
+                Num*= i;
+
+
+            return Num;
         }
 
 
@@ -282,33 +298,44 @@ namespace session5
 
 
 
-            Console.Write("Enter the number of elements: ");
-            int size = int.Parse(Console.ReadLine());
+            //Console.Write("Enter the number of elements: ");
+            //int size = int.Parse(Console.ReadLine());
 
-            int[] numbers = new int[size];
+            //int[] numbers = new int[size];
 
-            for (int i = 0; i < size; i++)
-            {
-                Console.Write($"Enter element {i + 1}: ");
-                numbers[i] = int.Parse(Console.ReadLine());
-            }
+            //for (int i = 0; i < size; i++)
+            //{
+            //Console.Write($"Enter element {i + 1}: ");
+            //numbers[i] = int.Parse(Console.ReadLine());
+            //}
 
-            int min = 0;
-            int max = 0;
+            //int min = 0;
+            //int max = 0;
 
-            MinMaxArray(ref numbers, ref min, ref max);
+            //MinMaxArray(ref numbers, ref min, ref max);
 
-            Console.WriteLine($"The minimum value is: {min}");
-            Console.WriteLine($"The maximum value is: {max}");
-        }
+            //Console.WriteLine(max);
+            //Console.WriteLine(min);
+            #endregion
 
+
+            #region Q07
+
+
+            //int num;
+            //bool Result;
+            //Console.WriteLine("Enter Number :");
+            //Result=int.TryParse(Console.ReadLine(), out num);
+
+            //int answer;
+            //answer=factorial(num);
+            //Console.WriteLine(answer);
+            
             #endregion
 
 
 
-
-
-
         }
-        
+
+    }
 }
