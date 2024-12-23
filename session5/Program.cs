@@ -26,9 +26,40 @@
 
             int Temp = x;
             x = y;
-           y=Temp;
+            y = Temp;
 
         }
+
+
+        public static int multiplication(int[] table)
+        {
+            //by value
+            int multiply = 1;
+            table[0] = 100;
+            for (int i = 0; i < table.Length; i++)
+            {
+                multiply *= table[i]; 
+            }
+
+            return multiply;
+        }
+
+
+
+        public static int multiplication(ref int[] table)
+        {
+
+            //by ref
+            int multiply = 1;
+            table[0] = 100;
+            for (int i = 0; i < table.Length; i++)
+            {
+                multiply *= table[i];
+            }
+
+            return multiply;
+        }
+
 
         static void Main(string[] args)
         {
@@ -57,13 +88,13 @@
             #region By Ref
 
 
-            int A = 5;
-            int B = 50;
-            Console.WriteLine(A);
-            Console.WriteLine(B);
-            swap(ref A, ref B);
-            Console.WriteLine(A);
-            Console.WriteLine(B);
+            //int A = 5;
+            //int B = 50;
+            //Console.WriteLine(A);
+            //Console.WriteLine(B);
+            //swap(ref A, ref B);
+            //Console.WriteLine(A);
+            //Console.WriteLine(B);
 
             //when we send ref we send the variable A=5,B=50  ---> x=5,y=50 and making swap and return main names (a,b)
             #endregion
@@ -72,6 +103,37 @@
             #endregion
 
 
+            #region Q02
+            //2-	Explain the difference between passing (Reference type parameters) by value and by reference then write a suitable c# example
+
+            
+            #region by value
+            //int[] numbers = { 2, 3 };
+            //Console.WriteLine(multiplication(numbers));
+            //Console.WriteLine(numbers[0]);
+
+
+            // when add table[0]=100 , i make numbers and table point to same values in heap so the first value will change  
+            #endregion
+
+            #region By ref
+
+
+
+            int[] numbers = { 2, 3 };
+            Console.WriteLine(multiplication(numbers));
+            Console.WriteLine(numbers[0]);
+
+
+            // i send numbers with obj and change the name to table and get the same answer 
+            #endregion
+
+
+
+
+
+
+            #endregion
         }
     }
 }
