@@ -176,6 +176,19 @@ namespace session5
         }
 
 
+        public static string replaceChar ( string input, int position, char New)
+        {//Q08
+
+            string before= input.Substring(0,position);
+            string after=input.Substring(position+1);
+
+            return before + New + after;
+        } 
+
+
+
+
+
         static void Main(string[] args)
         {
             #region Q01
@@ -330,7 +343,27 @@ namespace session5
             //int answer;
             //answer=factorial(num);
             //Console.WriteLine(answer);
-            
+
+            #endregion
+
+
+            #region Q08
+            //8-	Create a function named "ChangeChar" to modify a letter in a certain position (0 based) of a string, replacing it with a different letter
+
+
+            //Console.Write("Enter a Word : ");
+            //string input = Console.ReadLine();
+
+            //Console.Write("Enter Position: ");
+            //int position = int.Parse(Console.ReadLine());
+
+            //Console.Write("Enter new char : ");
+            //char newChar =char.Parse(Console.ReadLine());
+            //Console.WriteLine();
+
+            //string Edit=replaceChar(input, position, newChar);
+
+            //Console.WriteLine(Edit);
             #endregion
 
 
