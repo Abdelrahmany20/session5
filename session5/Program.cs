@@ -77,9 +77,38 @@ namespace session5
 
         }
 
-  
 
+        //public static int SumOfindividualArray(int [] numbers )
+        //{
+            //Q04
+            //int sum = 0;
+            
+            //for (int i=0; i<numbers.Length; i++)
+            //{
 
+                //sum += numbers[i];
+
+            //}
+
+            //return sum;
+
+            //I wanted to make the number that the user would enter into an array, and each number would be in a separate index,
+            //and then I would be able to sum the index.but I couldn’t do that.
+        //}
+        public static int SumOfNumbers(int number)
+        {
+
+            int sum = 0;
+            while (number > 0)
+
+            {
+                sum += number % 10;
+                number /= 10;
+            }
+
+            return sum;
+        }
+        
 
         static void Main(string[] args)
         {
@@ -170,6 +199,20 @@ namespace session5
             //Console.WriteLine(sum);
             //Console.WriteLine(subtracting);
             #endregion
+
+            #region Q04
+            //4-	Write a program in C# Sharp to create a function to calculate the sum of the individual digits of a given number.
+
+
+            //Console.Write("Enter a number: ");
+            //int number =int.Parse(Console.ReadLine());
+
+            //int answer = SumOfNumbers(number);
+
+            //Console.WriteLine($"Sum Of Numbers : {answer}");
+
+            #endregion
+
         }
     }
 }
