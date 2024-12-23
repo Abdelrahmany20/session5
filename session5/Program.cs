@@ -137,8 +137,27 @@ namespace session5
         }
 
 
+        public static void MinMaxArray(ref int[] Arrayy, out int min, out int max)
+        {
+
+            min = Arrayy[0];
+            max = Arrayy[0];
+
+            for (int i = 0; i < Arrayy.Length; i++)
+            {
+                if (Arrayy[i] < min)
+                {
+                    min = Arrayy[i];
+                }
+
+                if (Arrayy[i] > max)
+                {
+                    max = Arrayy[i];
+                }
 
 
+            }
+        }
 
 
         static void Main(string[] args)
@@ -249,14 +268,47 @@ namespace session5
             //or false if it is not:            
 
 
-            Console.WriteLine("Enter A Number :");
-            int number =int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter A Number :");
+            //int number =int.Parse(Console.ReadLine());
 
 
-            Console.WriteLine(prime(number));
+            //Console.WriteLine(prime(number));
 
             #endregion
 
+
+            #region Q06
+            //6-	Create a function named MinMaxArray, to return the minimum and maximum values stored in an array, using reference parameters
+
+
+
+            //Console.Write("Enter the number of elements: ");
+            //int size = int.Parse(Console.ReadLine());
+
+            //int[] numbers = new int[size];
+
+            //for (int i = 0; i < size; i++)
+            //{
+                //Console.Write($"Enter element {i + 1}: ");
+                //numbers[i] = int.Parse(Console.ReadLine());
+            //}
+
+            //int min = 0;
+            //int max = 0;
+
+            //MinMaxArray(ref numbers, out min, out max);
+
+            //Console.WriteLine($"The minimum value is: {min}");
+            //Console.WriteLine($"The maximum value is: {max}");
         }
-    }
+
+            #endregion
+
+
+
+
+
+
+        }
+        
 }
