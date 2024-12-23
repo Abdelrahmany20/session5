@@ -137,7 +137,7 @@ namespace session5
         }
 
 
-        public static void MinMaxArray(ref int[] Arrayy, out int min, out int max)
+        public static void MinMaxArray(ref int[] Arrayy, ref int min, ref int max)
         {
 
             min = Arrayy[0];
@@ -282,24 +282,24 @@ namespace session5
 
 
 
-            //Console.Write("Enter the number of elements: ");
-            //int size = int.Parse(Console.ReadLine());
+            Console.Write("Enter the number of elements: ");
+            int size = int.Parse(Console.ReadLine());
 
-            //int[] numbers = new int[size];
+            int[] numbers = new int[size];
 
-            //for (int i = 0; i < size; i++)
-            //{
-                //Console.Write($"Enter element {i + 1}: ");
-                //numbers[i] = int.Parse(Console.ReadLine());
-            //}
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write($"Enter element {i + 1}: ");
+                numbers[i] = int.Parse(Console.ReadLine());
+            }
 
-            //int min = 0;
-            //int max = 0;
+            int min = 0;
+            int max = 0;
 
-            //MinMaxArray(ref numbers, out min, out max);
+            MinMaxArray(ref numbers, ref min, ref max);
 
-            //Console.WriteLine($"The minimum value is: {min}");
-            //Console.WriteLine($"The maximum value is: {max}");
+            Console.WriteLine($"The minimum value is: {min}");
+            Console.WriteLine($"The maximum value is: {max}");
         }
 
             #endregion
