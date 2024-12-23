@@ -67,7 +67,7 @@ namespace session5
 
         public static void SumAndSubt(int x, int y, int c, int z, out int sum, out int subtracting)
         {
-
+            //Q03
 
             sum = x + y;
             subtracting = c - z;
@@ -80,24 +80,25 @@ namespace session5
 
         //public static int SumOfindividualArray(int [] numbers )
         //{
-            //Q04
-            //int sum = 0;
-            
-            //for (int i=0; i<numbers.Length; i++)
-            //{
+        //Q04
+        //int sum = 0;
 
-                //sum += numbers[i];
+        //for (int i=0; i<numbers.Length; i++)
+        //{
 
-            //}
+        //sum += numbers[i];
 
-            //return sum;
-
-            //I wanted to make the number that the user would enter into an array, and each number would be in a separate index,
-            //and then I would be able to sum the index.but I couldn’t do that.
         //}
+
+        //return sum;
+
+        //I wanted to make the number that the user would enter into an array, and each number would be in a separate index,
+        //and then I would be able to sum the index.but I couldn’t do that.
+        //}
+
         public static int SumOfNumbers(int number)
         {
-
+            //Q04
             int sum = 0;
             while (number > 0)
 
@@ -108,7 +109,37 @@ namespace session5
 
             return sum;
         }
-        
+
+
+        public static bool prime(int Number)
+       
+        //Q05
+        {
+            if (Number ==1)
+            {
+                return false;
+            }
+
+                for (int i = 2; i < Number; i++)
+                {
+                    if(Number % i == 0)
+                        return false;
+                    
+
+
+                }
+
+
+
+            return true;
+
+
+        }
+
+
+
+
+
 
         static void Main(string[] args)
         {
@@ -210,6 +241,19 @@ namespace session5
             //int answer = SumOfNumbers(number);
 
             //Console.WriteLine($"Sum Of Numbers : {answer}");
+
+            #endregion
+
+            #region Q05
+            //5-	Create a function named "IsPrime", which receives an integer number and retuns true if it is prime,
+            //or false if it is not:            
+
+
+            Console.WriteLine("Enter A Number :");
+            int number =int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine(prime(number));
 
             #endregion
 
